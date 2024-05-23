@@ -80,7 +80,7 @@ void aux_playWhere(char** matriz, int nrows, int mcols)
             if (matriz[i][j] == '.') {
                 column = j;
                 row = i;
-                if(is_playable(matriz, column, row)){
+                if (is_playable(matriz, column, row)) {
                     matriz[i][j] = '*';
                 }
             }
@@ -90,6 +90,7 @@ void aux_playWhere(char** matriz, int nrows, int mcols)
 }
 
 bool is_playable(char** matriz, int column, int row)
+
 {
     int countImpar = 0;
     //Fixando a linha e movendo a coluna onde está o ponto: coluna antecessora e sucessora
@@ -113,7 +114,7 @@ bool is_playable(char** matriz, int column, int row)
         countImpar++;
     }
 
-    if(countImpar % 2 != 0){
+    if (countImpar % 2 != 0) {
         return false;
     }
 
@@ -121,10 +122,10 @@ bool is_playable(char** matriz, int column, int row)
 
 }
 
-void printMatriz(char **matriz, int nrows, int mcols)
+void printMatriz(char** matriz, int nrows, int mcols)
 {
-    for(int i=0; i<nrows; i++){
-        for(int j=0; j<mcols;j++){
+    for (int i = 0; i < nrows; i++) {
+        for (int j = 0; j < mcols;j++) {
             printf("%c ", matriz[i][j]);
         }
         printf("\n");
