@@ -43,11 +43,11 @@ resposta:
 #include <stdbool.h>
 #include <stdlib.h>
 
-#define N 1000
-#define M 1000
-
 void leituraMatriz(char** matriz, int nrows, int mcols);
 void alocacaoMatriz(char*** matriz, int nrows, int mcols);
+void aux_playWhere(char** matriz, int nrows, int mcols);
+bool is_playable(char** matriz, int column, int row);
+void printMatriz(char** matriz, int nrows, int mcols);
 
 //Leitura de matriz normal, para cada linha vai se ler m colunas.
 void leituraMatriz(char** matriz, int nrows, int mcols)
