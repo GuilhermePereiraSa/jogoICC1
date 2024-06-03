@@ -54,7 +54,7 @@ void leituraMatriz(char** matriz, int nrows, int mcols)
 {
     for (int i = 0; i < nrows; i++) {
         for (int j = 0; j < mcols; j++) {
-            scanf("%c", matriz[i][j]);
+            scanf(" %c", matriz[i][j]);
         }
     }
 }
@@ -141,7 +141,7 @@ int main(void) {
 
     leituraMatriz(Mat, n, m);
 
-    aux(Mat, n, m);
+    aux_playWhere(Mat, n, m);
 
     printMatriz(Mat, n, m);
 
